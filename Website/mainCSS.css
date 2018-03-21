@@ -1,0 +1,72 @@
+table{
+    border-collapse: collapse;
+    width:100%;
+}
+
+.intend
+{
+    margin-top:20px;
+}
+.reg_link
+{
+    margin-right:9px;
+}
+.element
+{
+    margin-top:10px;
+    background: #e3e3e3;
+    margin-right: 5px;
+}
+
+.btn_prib{
+    margin: 10px 0;
+}
+
+.sel_avto{
+    width: 50% !important;
+    margin-top: 10px;
+}
+
+.el_inp input{
+    margin: 5px 0;
+}
+
+tbody tr:hover
+{
+    box-shadow: 1px 1px 14px 0px rgba(0,0,0,0.75);
+}
+
+.element:hover
+{   
+    
+    box-shadow: 1px 1px 14px 0px rgba(0,0,0,0.75);
+    transition: box-shadow;
+    transition-timing-function: ease-in;
+    transition-duration: 150ms;
+}
+
+body{
+    background: antiquewhite;
+    padding-bottom: 100px;
+}
+
+table th{
+    text-align: left;
+    background-color: #3a6070;
+    color:#fff;
+    padding: 4px 30px 4px 8px;
+}
+
+table td{
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px
+}
+
+table tr:nth-child(odd) td{
+    background-color: #e7edf0
+}
+
+tr{
+    cursor: pointer; transition: all .25s ease-in-out
+}
+.selected{background-color: #cfcfcf; font-weight: bold; color: rgb(0, 0, 0);}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <title>Учет и бронирование билетов</title>
+    <link href="mainCSS.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+            </div>
+            <div>
+                <h5 id="UserName"></h5>
+                <h6>
+                    <a class="reg_link" href="registrationPage.html"> Регистрация</a>
+                </h6>
+                <h6>
+                    <a class="reg_link" href="#" id="Exit" onclick="DeleteCookie()">Выход</a>
+                </h6>
+                <h6>
+                    <a class="reg_link" id="enter" href="authorizationPage.html"> Вход</a>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-12 intend">
+            <div class="element card">
+                <div class="card-header">
+                    <h3 id="FindReis">Поиск рейса</h3>
+                </div>
+                <div class="card-body">
+                    <form action="" class="form-group">
+                        <input class="form-control " type="text" id="begin" placeholder="Откуда">
+                    </form>
+                    <form action="" class="form-group">
+                        <input class="form-control " type="text" id="end" placeholder="Куда">
+                    </form>
+                    <button class="btn btn-primary" onclick="FindTrip()">Найти рейс</button>
+                </div>
+                <div class="card-footer">
+                    <h5 id="FindReis">Найденные рейсы</h5>
+                    <h6>Кликните по поездке для бронирования</h6>
+                    <table id="tab1" border="1" class="sortable">
+                        <thead>
+                            <tr>
+                                <th>Дата поездки</th>
+                                <th>Кол-во свободных мест</th>
+                                <th>Модель автобуса</th>
+                                <th>Номер автобуса</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="element card">
+                <div class="card-header">
+                    <h3>Забронированные рейсы</h3>
+                    <button class="btn btn-primary" onclick="BookingTrips()">Обновить</button>
+                </div>
+                <div class="card-body">
+                    <h6>Кликните по поездке для её отмены</h6>
+                    <table id="tab2" border="1" class="sortable">
+                        <thead>
+                            <tr>
+                                <th>Дата поездки</th>
+                                <th>Отправление</th>
+                                <th>Прибытие</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="element card">
+                <div class="card-header">
+                    <h3>График работы водителей</h3>
+                </div>
+                <div class="card-body">
+                    <form action="" class="form-group">
+                        <input class="form-control " type="text" id="FirstNameDriver" placeholder="Имя водителя">
+                    </form>
+                    <form action="" class="form-group">
+                        <input class="form-control " type="text" id="SecondNameDriver" placeholder="Фамилия">
+                    </form>
+                    <button class="btn btn-primary" onclick="ViewSchedule()">Найти график водителя</button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-body element">
+                        <table id="tab3" border="1" class="sortable">
+                            <thead>
+                                <tr>
+                                    <th>Дата поездки</th>
+                                    <th>Номер автобуса</th>
+                                    <th>Отправление</th>
+                                    <th>Прибытие</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element card">
+                <div class="card-header">
+                    <h3>Все маршруты: </h3>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary" onclick="ViewItinerary()">Вывести все маршруты</button>
+                </div>
+                <div class="card-body">
+                    <div class=" container">
+                        <h6>Выберете маршрут для изменения</h6>
+                        <div class="row">
+                            <div class="card-body element">
+                                <table id="tab4" border="1" class="sortable">
+                                    <thead>
+                                        <tr>
+                                            <th>Отправление</th>
+                                            <th>Прибытие</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-body element">
+                                <input class="form-control " type="text" id="beginItinerary" placeholder="Отправление">
+                                <input class="form-control " type="text" id="endItinerary" placeholder="Прибытие">
+                                <button class="btn btn-primary btn_prib" onclick="EditItinerary()">Изменить маршрут</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element card">
+                <div class="card-header">
+                    <h3>Привязка водителей к автобусам: </h3>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary" onclick="ViewTwoTable()">Вывести таблицы</button>
+                    <div class="container">
+                        <h6>Выберете водителя для переназначения автобуса</h6>
+                        <div class="row">
+
+                            <div class="card-body element">
+                                <table id="tab5" border="1" class="sortable">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип автобуса</th>
+                                            <th>Имя водителя</th>
+                                            <th>Фамилия водителя</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="card-body element">
+                                <table id="tab6" border="1" class="sortable">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип автобуса</th>
+                                            <th>Номер автобуса</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <select class="form-control sel_avto" id="selectList"></select>
+                        <button class="btn btn-primary btn_prib" onclick="ChangeBusForDriver()">Привязать к другому автобусу</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

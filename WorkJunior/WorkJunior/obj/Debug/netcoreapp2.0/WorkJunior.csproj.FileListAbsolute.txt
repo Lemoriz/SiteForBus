@@ -1,0 +1,11 @@
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\bin\Debug\netcoreapp2.0\WorkJunior.deps.json
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\bin\Debug\netcoreapp2.0\WorkJunior.runtimeconfig.json
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\bin\Debug\netcoreapp2.0\WorkJunior.runtimeconfig.dev.json
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\bin\Debug\netcoreapp2.0\WorkJunior.dll
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\obj\Debug\netcoreapp2.0\WorkJunior.csprojResolveAssemblyReference.cache
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\obj\Debug\netcoreapp2.0\WorkJunior.csproj.CoreCompileInputs.cache
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\obj\Debug\netcoreapp2.0\WorkJunior.AssemblyInfoInputs.cache
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\obj\Debug\netcoreapp2.0\WorkJunior.AssemblyInfo.cs
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\bin\Debug\netcoreapp2.0\WorkJunior.pdb
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\obj\Debug\netcoreapp2.0\WorkJunior.dll
+C:\Users\Ramil\Desktop\ProgramForJob\WorkJunior\WorkJunior\obj\Debug\netcoreapp2.0\WorkJunior.pdb
